@@ -37,7 +37,24 @@ message.classList.add('cookie-message');
 message.innerHTML = `We use cookied for improved functionality and analytics.<button class="btn btn--close-cookie"> Got it!</button>`;
 
 header.append(message);
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
 
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height);
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px';
+document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+// const logo = document.querySelector('.nav__logo');
+// logo.alt = 'Beautiful minimalist logo';
+// console.log(logo.alt);
+// console.log(logo.designer);
+// console.log(logo.getAttribute('designer'));
+// logo.setAttribute('company', 'Bankist');
+// console.log(logo.getAttribute('company'));
+// console.log(logo.dataset.versionClassNumber);
+// console.log(logo.dataset.versionNumber);
 document
   .querySelector('.btn--close-cookie')
   .addEventListener('click', function () {
