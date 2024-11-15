@@ -290,3 +290,15 @@ const slider = function () {
   });
 };
 slider();
+
+document.addEventListener('DOMContentLoaded', function (e) {
+  console.log('html parsed and DOM tree built', e);
+});
+window.addEventListener('load', function (e) {
+  console.log('page fully loaded');
+});
+// window.addEventListener('beforeunload', function (e) {
+//   e.preventDefault();
+//   e.returnValue = '';
+//   console.log(e);
+// });
